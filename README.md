@@ -1,1 +1,3 @@
 # AdaptorStrategyTemplate
+## This program uses the pattern of Adaptor, Strategy, and Template to implement a car the changes mode from fuel mode, hybrid mode, and electric mode according to the current status of the amount charged of both Main and Secondary battery.
+## Adaptor Pattern is used to allow each car mode to adapt to the functions of basic car. Then, Strategy Pattern allows to have different specific implementation to the same abstract functions. Similarly with Template of the functions simplicity and code understandability is enhanced.

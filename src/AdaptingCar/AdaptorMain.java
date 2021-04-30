@@ -23,13 +23,13 @@ public class AdaptorMain {
 			System.out.println();
 		}
 	}
-	
+
 	public static void randomGenerator() {
 		Random rand = new Random();
 		mainBattery = rand.nextInt(50) + 50;
-		secondaryBattery = rand.nextInt(mainBattery - 50) + 50;
+		secondaryBattery = rand.nextInt(50) + 50;
 	}
-	
+
 	public static void setMode() {
 		if(mainBattery >= 75 && secondaryBattery >=75) {
 			car = new ElectricAdaptor(new ElectricMode());
@@ -42,7 +42,7 @@ public class AdaptorMain {
 			currentMode = "Fuel Mode";
 		}
 	}
-	
+
 	public static void currentSpeed(String currentMode) {
 		Random rand = new Random();
 		int speed = rand.nextInt(20) + 40;
