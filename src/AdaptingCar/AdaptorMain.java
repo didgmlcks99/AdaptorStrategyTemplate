@@ -27,7 +27,7 @@ public class AdaptorMain {
 	public static void randomGenerator() {
 		Random rand = new Random();
 		mainBattery = rand.nextInt(50) + 50;
-		secondaryBattery = rand.nextInt(50) + 50;
+		secondaryBattery = rand.nextInt(mainBattery - 50) + 50;
 	}
 	
 	public static void setMode() {
