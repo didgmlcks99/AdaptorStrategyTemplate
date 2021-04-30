@@ -1,4 +1,4 @@
-package HybridCar;
+package AdaptingCar;
 
 public class ElectricMode implements ElectricModeTemplate{
 

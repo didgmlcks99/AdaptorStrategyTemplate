@@ -1,4 +1,4 @@
-package HybridCar;
+package AdaptingCar;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package HybridCar;
+package AdaptingCar;
 
 public interface MyCar {
 	void batteryStatus(int mainBattery, int secondaryBattery);
