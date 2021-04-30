@@ -37,7 +37,7 @@ public class AdaptorMain {
 		}else if(mainBattery >= 75 && secondaryBattery < 75) {
 			car = new HybridAdaptor(new HybridMode());
 			currentMode = "Hybrid Mode";
-		}else if(mainBattery < 75 && secondaryBattery < 75) {
+		}else {
 			car = new FuelAdaptor(new FuelMode());
 			currentMode = "Fuel Mode";
 		}
