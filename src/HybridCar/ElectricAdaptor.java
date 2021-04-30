@@ -1,41 +1,41 @@
 package HybridCar;
 
-public class FuelAdaptor implements MyCar {
+public class ElectricAdaptor implements MyCar {
 	
-	private FuelModeTemplate car;
+	private ElectricModeTemplate car;
 	
-	public FuelAdaptor(FuelModeTemplate car) {
+	public ElectricAdaptor(ElectricModeTemplate car) {
 		this.car = car;
 	}
 
 	@Override
 	public void batteryStatus(int mainBattery, int secondaryBattery) {
-		car.bothBatteryLow(mainBattery, secondaryBattery);
+		car.bothBatteryEnough(mainBattery, secondaryBattery);
 	}
 
 	@Override
 	public void convertMode(String currentMode) {
-		car.convertFuelMode(currentMode);
+		car.convertElectricMode(currentMode);
 	}
 
 	@Override
 	public void gearSetting(String currentMode) {
-		car.startFuelEngine(currentMode);
+		car.cutFuelEngine(currentMode);
 	}
 
 	@Override
 	public void supplyElectricity(String currentMode) {
-		car.cutElectricitySupply(currentMode);
+		car.supplyFrontRearMotor(currentMode);
 	}
 
 	@Override
 	public void runningEngine() {
-		car.useFuelEngine();
+		car.noFuelEngine();
 	}
 
 	@Override
 	public void chargeBattery() {
-		car.chargeWithMainBrake();
+		car.chargeBrake();
 	}
 
 }

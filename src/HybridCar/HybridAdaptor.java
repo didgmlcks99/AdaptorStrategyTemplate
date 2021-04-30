@@ -1,21 +1,21 @@
 package HybridCar;
 
-public class FuelAdaptor implements MyCar {
+public class HybridAdaptor implements MyCar {
+
+	private HybridModeTemplate car;
 	
-	private FuelModeTemplate car;
-	
-	public FuelAdaptor(FuelModeTemplate car) {
+	public HybridAdaptor(HybridModeTemplate car) {
 		this.car = car;
 	}
-
+	
 	@Override
 	public void batteryStatus(int mainBattery, int secondaryBattery) {
-		car.bothBatteryLow(mainBattery, secondaryBattery);
+		car.secondaryBatteryLow(mainBattery, secondaryBattery);
 	}
 
 	@Override
 	public void convertMode(String currentMode) {
-		car.convertFuelMode(currentMode);
+		car.convertHybridMode(currentMode);
 	}
 
 	@Override
@@ -25,7 +25,7 @@ public class FuelAdaptor implements MyCar {
 
 	@Override
 	public void supplyElectricity(String currentMode) {
-		car.cutElectricitySupply(currentMode);
+		car.supplyFrontMotor(currentMode);
 	}
 
 	@Override
